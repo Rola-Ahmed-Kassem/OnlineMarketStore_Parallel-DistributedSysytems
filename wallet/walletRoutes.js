@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const wallet = require("./walletService");
-const { authenticateToken } = require("./authMiddleware");
+const { authenticateToken } = require("../auth/authMiddleware");
 
 
 // GET /api/v1/wallet/balance

@@ -4,8 +4,9 @@
 //  DB: finance_db (financeDb.js)
 //  Port: 3001
 // ============================================================
+const path  = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 
-require("dotenv").config();
 const express = require("express");
 
 const walletRoutes = require("./walletRoutes");

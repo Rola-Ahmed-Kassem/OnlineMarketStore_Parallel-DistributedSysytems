@@ -8,8 +8,8 @@ const express    = require("express");
 const router     = express.Router();
 const rateLimit  = require("express-rate-limit");
 const { body, validationResult } = require("express-validator");
-const { authenticateToken } = require("./authMiddleware");
-const authService = require("./authService");
+const { authenticateToken } = require("../auth/authMiddleware");
+const authService = require("../auth/authService");
 const userService = require("./userService");
 
 // ── Helpers ───────────────────────────────────────────────────────────────────

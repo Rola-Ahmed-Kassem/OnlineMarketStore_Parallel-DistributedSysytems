@@ -14,7 +14,7 @@ const router        = express.Router();
 const { body, query, validationResult } = require("express-validator");
 const rateLimit     = require("express-rate-limit");
 
-const authenticateToken = require("../auth/authMiddleware");
+const {authenticateToken} = require("../auth/authMiddleware");
 const orderService      = require("./orderService");
 const reportService     = require("./reportService");
 

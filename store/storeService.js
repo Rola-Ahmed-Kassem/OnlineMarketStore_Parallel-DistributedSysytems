@@ -5,7 +5,7 @@
 // ============================================================
 
 const crypto = require("crypto");
-const db     = require("../storesDb");
+const db     = require("../usersDb");
 
 // ── Register a new external store ────────────────────────────────────────────
 // Generates a plain API key returned once to the caller,
@@ -30,7 +30,7 @@ async function registerStore({ storeName, ownerName, email }) {
 
   const [result] = await db.query(
     `INSERT INTO stores (store_name, owner_name, email, api_key_hash)
-     VALUES (?, ?, ?, ?, ?)`,
+     VALUES (?, ?, ?, ?)`,
     [storeName, ownerName, email || null, apiKeyHash]
   );
 

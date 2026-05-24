@@ -1,9 +1,12 @@
 // authService.js
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const db = require("./usersDb");
+const db = require("../usersDb");
 
-const JWT_SECRET = process.env.JWT_SECRET || "your-super-secret-jwt-key-change-this-in-production";
+const JWT_SECRET = process.env.JWT_SECRET || "failed-jwt";
 const JWT_EXPIRES_IN = "7d";
 
 /**

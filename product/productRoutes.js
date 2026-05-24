@@ -6,7 +6,7 @@
 const express        = require("express");
 const router         = express.Router();
 const productService = require("./productService");
-const { authenticateToken } = require("./authMiddleware"); // FIX: destructure correctly
+const { authenticateToken } = require("../auth/authMiddleware"); // FIX: destructure correctly
 
 function errShape(status, message, path) {
   const text = { 400: "Bad Request", 404: "Not Found", 500: "Internal Server Error" };

@@ -5,14 +5,16 @@
 //  Port: 3005
 // ============================================================
 
-require("dotenv").config();
+const path  = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+
 const express = require("express");
 const cors    = require("cors");
 
 const userRoutes = require("./userRoutes");
 
 if (!process.env.JWT_SECRET)  throw new Error("FATAL: JWT_SECRET is not set.");
-if (!process.env.DB_PASSWORD) throw new Error("FATAL: DB_PASSWORD is not set.");
+if (!process.env.USERS_DB_PASSWORD) throw new Error("FATAL: DB_PASSWORD is not set.");
 
 const PORT = process.env.USERS_PORT || 3005;
 const app  = express();

@@ -8,8 +8,8 @@
 const express          = require("express");
 const router           = express.Router();
 const inventoryService = require("./inventoryService");
-const productService   = require("./productService");
-const { authenticateToken } = require("./authMiddleware");
+const productService   = require("../product/productService");
+const { authenticateToken } = require("../auth/authMiddleware");
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 

@@ -5,7 +5,7 @@
 // ============================================================
 
 const bcrypt = require("bcrypt");
-const db     = require("./usersDb");
+const db     = require("../usersDb");
 
 // ── GET user by id ────────────────────────────────────────────────────────────
 
